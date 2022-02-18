@@ -17,6 +17,9 @@ a {
   padding: 10px 30px;
   text-decoration: none;
   color: $driftwood;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
   &:hover {
     color: $driftwood-hover;
     border: 2px solid $driftwood-hover;
