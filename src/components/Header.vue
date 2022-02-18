@@ -5,14 +5,18 @@
       class="container py-3 d-flex align-items-center justify-content-between"
     >
       <!-- Logo -->
-      <img
-        src="../assets/img/avadabarbers-logo-x1.png"
-        alt="Avada Barbers Logo"
-      />
+      <a href="#">
+        <img
+          src="../assets/img/avadabarbers-logo-x1.png"
+          alt="Avada Barbers Logo"
+        />
+      </a>
       <!-- Hamburger menu and shop icon -->
       <div class="shop-menu">
-        <i class="fa-solid fa-cart-shopping px-3"></i
-        ><i class="fa-solid fa-lg fa-bars px-3"></i>
+        <a href="#" class="mx-3">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <a href="#" class="mx-3"><i class="fa-solid fa-lg fa-bars"></i></a>
       </div>
     </div>
     <!-- Jumbotron -->
@@ -60,7 +64,9 @@ header {
   font-family: $lato;
 
   .shop-menu {
-    color: white;
+    a {
+      color: white;
+    }
   }
   .jumbotron {
     color: white;
@@ -86,6 +92,10 @@ header {
       padding: 10px 30px;
       text-decoration: none;
       color: $driftwood;
+      &:hover {
+        color: $driftwood-hover;
+        border: 2px solid $driftwood-hover;
+      }
     }
   }
 }
