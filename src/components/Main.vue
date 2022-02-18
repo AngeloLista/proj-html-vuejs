@@ -14,21 +14,84 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="d-flex flex-column align-items-center py-5">
+    <section id="services">
       <!-- Title -->
-      <span>mens grooming</span>
-      <h2>Services</h2>
-      <div class="cards-container container d-flex align-items-center">
-        <!-- Card -->
-        <ServiceCard
-          v-for="(service, index) in services"
-          :key="index"
-          :name="service.name"
-          :text="service.text"
-          :imgUrl="service.imgUrl"
-        />
+      <div class="content d-flex flex-column align-items-center py-5">
+        <span>mens grooming</span>
+        <h2>Services</h2>
+        <div class="cards-container container d-flex align-items-center">
+          <!-- Card -->
+          <ServiceCard
+            v-for="(service, index) in services"
+            :key="index"
+            :name="service.name"
+            :text="service.text"
+            :imgUrl="service.imgUrl"
+          />
+        </div>
+        <ButtonLink text="read about our services" />
       </div>
-      <ButtonLink text="read about our services" />
+      <div class="triangle-separetor"></div>
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+      <div class="content d-flex flex-column align-items-center py-5">
+        <!-- Title -->
+        <span>we have you covered</span>
+        <h2>Avada Grooming Products</h2>
+        <div class="cards-container container d-flex align-items-center mb-5">
+          <!-- Card -->
+          <div class="product-card d-flex align-items-center flex-column">
+            <a href="#">
+              <img
+                class="img-fluid"
+                src="../assets/img/brush_dark.png"
+                alt="brush"
+              />
+              <h3>Brush</h3>
+              <span class="price">$15.00</span>
+            </a>
+          </div>
+          <!-- Card -->
+          <div class="product-card d-flex align-items-center flex-column">
+            <a href="#">
+              <img
+                class="img-fluid"
+                src="../assets/img/scissors.png"
+                alt="brush"
+              />
+              <h3>Scissors</h3>
+              <span class="price">$85.00</span>
+            </a>
+          </div>
+          <!-- Card -->
+          <div class="product-card d-flex align-items-center flex-column">
+            <a href="#">
+              <img
+                class="img-fluid"
+                src="../assets/img/hot_oil_dark.png"
+                alt="brush"
+              />
+              <h3>Hot Oil</h3>
+              <span class="price">$15.00</span>
+            </a>
+          </div>
+          <!-- Card -->
+          <div class="product-card d-flex align-items-center flex-column">
+            <a href="#">
+              <img
+                class="img-fluid"
+                src="../assets/img/straight_razor_dark.png"
+                alt="brush"
+              />
+              <h3>Straight Razor</h3>
+              <span class="price">$30.00</span>
+            </a>
+          </div>
+        </div>
+        <ButtonLink text="shop our product range" />
+      </div>
     </section>
   </main>
 </template>
@@ -81,6 +144,9 @@ main {
   }
   #services {
     // Title
+    .content {
+      height: 100vh;
+    }
     span {
       color: $driftwood;
       font-weight: bold;
@@ -92,6 +158,14 @@ main {
       font-size: 70px;
       color: $silver-chalice;
       margin-bottom: 1.9rem;
+    }
+    .triangle-separetor {
+      width: 0;
+      height: 0;
+      line-height: 0;
+      border-bottom: 100px solid #121315;
+      border-left: 49.39vw solid transparent;
+      border-right: 49.39vw solid transparent;
     }
     // Card
     .cards-container {
@@ -112,6 +186,37 @@ main {
         p {
           text-align: center;
         }
+      }
+    }
+  }
+  #products {
+    background-image: url("../assets/img/avadabarbers-reviewsbackground.jpg");
+    background-size: cover;
+    span {
+      color: $driftwood;
+      font-weight: bold;
+      display: block;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-family: $abril;
+      font-size: 70px;
+      color: $silver-chalice;
+      margin-bottom: 1.9rem;
+    }
+    .product-card {
+      width: 25%;
+      img {
+        margin-bottom: 30px;
+      }
+      a {
+        text-decoration: none;
+        text-align: center;
+      }
+      h3 {
+        font-family: $abril;
+        color: $driftwood;
+        margin-bottom: 15px;
       }
     }
   }
