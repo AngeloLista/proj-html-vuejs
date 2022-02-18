@@ -20,41 +20,13 @@
       <h2>Services</h2>
       <div class="cards-container container d-flex align-items-center">
         <!-- Card -->
-        <div class="service-card d-flex align-items-center flex-column">
-          <img
-            src="../assets/img/avadabarbers-trimcut-icon-before.png"
-            alt="trimcut"
-          />
-          <h3>Trim & Cut</h3>
-          <p class="text-muted">
-            Avada Barbers are experts in the lickety split trim and hair cut.
-            Quick but careful and ridiculously good looking.
-          </p>
-        </div>
-        <div class="service-card d-flex align-items-center flex-column">
-          <!-- Card -->
-          <img
-            src="../assets/img/avadabarbers-washndry-icon.png"
-            alt="trimcut"
-          />
-          <h3>Wash & Dry</h3>
-          <p class="text-muted">
-            Take a seat in our fine leather chairs, lean back and let us lather
-            you a fresh head in a luxurios fascion.
-          </p>
-        </div>
-        <div class="service-card d-flex align-items-center flex-column">
-          <!-- Card -->
-          <img
-            src="../assets/img/avadabarbers-beardtrim-icon.png"
-            alt="trimcut"
-          />
-          <h3>Beard Tidy</h3>
-          <p class="text-muted">
-            Tame the tangles and untidy facial hairs like a gentleman with our
-            Beard Tidy services from Avada Barbers.
-          </p>
-        </div>
+        <ServiceCard
+          v-for="(service, index) in services"
+          :key="index"
+          :name="service.name"
+          :text="service.text"
+          :imgUrl="service.imgUrl"
+        />
       </div>
       <ButtonLink text="read about our services" />
     </section>
@@ -63,16 +35,21 @@
 
 <script>
 import ButtonLink from "./ButtonLink.vue";
+import ServiceCard from "./Main/ServiceCard.vue";
+
 export default {
   name: "Main",
   components: {
     ButtonLink,
+    ServiceCard,
   },
+  props: ["services"],
 };
 </script>
 
 <style scoped lang="scss">
 @import "../assets/scss/_vars.scss";
+
 main {
   font-family: $lato;
   #pro-barbers {
