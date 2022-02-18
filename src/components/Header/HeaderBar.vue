@@ -35,7 +35,7 @@ export default {
 
 <style scoped lang="scss">
 #header-bar {
-  height: 110px;
+  height: 70px;
 }
 .shop-menu {
   a {

@@ -14,7 +14,7 @@
         <h1>Barber Shop</h1>
         <div class="separator"></div>
         <p>The pinnacle of Male Grooming</p>
-        <a href="#">LEARN MORE</a>
+        <ButtonLink text="LEARN MORE" />
       </div>
 
       <!-- Jumbotron img -->
@@ -30,8 +30,12 @@
 </template>
 
 <script>
+import ButtonLink from "../ButtonLink.vue";
 export default {
   name: "Jumbotron",
+  components: {
+    ButtonLink,
+  },
 };
 </script>
 
@@ -41,7 +45,7 @@ export default {
 .jumbotron {
   color: white;
   padding: 0 30px;
-  height: calc(100% - 110px);
+  height: calc(100% - 70px);
   h1 {
     font-family: $abril;
     font-size: 5rem;
