@@ -2,19 +2,15 @@
   <main>
     <!-- Pro Barbers -->
     <section id="pro-barbers" class="d-flex flex-column align-items-center">
-      <div class="row">
-        <div class="col">
-          <!-- Section text -->
-          <div class="content text-center">
-            <!-- title DA COMPONENTIZZARE -->
-            <span>award winning</span>
-            <h2>Pro Babers</h2>
-            <ButtonLink text="meet your new barber" />
-          </div>
-          <!-- Triangle Sepator -->
-          <div class="triangle-separetor"></div>
-        </div>
+      <!-- Section text -->
+      <div class="content text-center">
+        <!-- title DA COMPONENTIZZARE -->
+        <span>award winning</span>
+        <h2>Pro Babers</h2>
+        <ButtonLink text="meet your new barber" />
       </div>
+      <!-- Triangle Sepator -->
+      <div class="triangle-separetor"></div>
     </section>
 
     <!-- Services -->
@@ -40,7 +36,7 @@
 
     <!-- Products -->
     <section id="products">
-      <div class="content d-flex flex-column align-items-center py-5">
+      <div class="content d-flex flex-column align-items-center pt-5">
         <!-- Title -->
         <span>we have you covered</span>
         <h2>Avada Grooming Products</h2>
@@ -57,6 +53,34 @@
         <ButtonLink text="shop our product range" />
       </div>
     </section>
+
+    <!-- Featured Product -->
+    <section id="featured" class="container">
+      <div class="row">
+        <div id="featured-product-img" class="col-4 d-flex align-items-center">
+          <img
+            src="../assets/img/shaving_butter.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-8 p-5">
+          <!-- Title -->
+          <span>this month featured product</span>
+          <h2>Shaving Butter</h2>
+          <p class="text-muted">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            provident perferendis dolorum non. Ipsum placeat fugit minima quas
+            inventore? Perspiciatis sit similique quis voluptates molestiae
+            minus ducimus id quia dolores.
+          </p>
+          <ButtonLink text="buy now" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews"></section>
   </main>
 </template>
 
@@ -81,6 +105,7 @@ export default {
 
 main {
   font-family: $lato;
+  // Pro Barbers
   #pro-barbers {
     background-image: url("../assets/img/avadabarbers-about-introbackground.jpg");
     background-size: cover;
@@ -108,6 +133,7 @@ main {
       border-right: 49.39vw solid transparent;
     }
   }
+  // Services
   #services {
     // Title
     .content {
@@ -155,9 +181,11 @@ main {
       }
     }
   }
+  // Products
   #products {
     background-image: url("../assets/img/avadabarbers-reviewsbackground.jpg");
     background-size: cover;
+    padding-bottom: 150px;
     span {
       color: $driftwood;
       font-weight: bold;
@@ -169,6 +197,37 @@ main {
       font-size: 70px;
       color: $silver-chalice;
       margin-bottom: 1.9rem;
+    }
+  }
+  // Featured Product
+  #featured {
+    background-color: $cod-gray;
+    border-top: 6px solid $driftwood;
+    margin-top: -35px;
+    margin-bottom: 70px;
+    width: 75%;
+    span {
+      color: $driftwood;
+      font-weight: bold;
+      display: block;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-family: $abril;
+      font-size: 70px;
+      color: $silver-chalice;
+      margin-bottom: 3rem;
+    }
+    p {
+      padding-right: 30px;
+      margin-bottom: 50px;
+    }
+    #featured-product-img {
+      background-image: url("../assets/img/avadabarbers-cta-background.jpg");
+      background-size: cover;
+      img {
+        object-fit: contain;
+      }
     }
   }
 }
