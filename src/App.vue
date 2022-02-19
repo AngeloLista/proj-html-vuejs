@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Main :services="services" />
+    <Main :services="services" :products="products" />
     <Footer />
   </div>
 </template>
@@ -31,6 +31,28 @@ export default {
           name: "Beard Tidy",
           text: "Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada Barbers.",
           imgUrl: require("./assets/img/avadabarbers-beardtrim-icon.png"),
+        },
+      ],
+      products: [
+        {
+          name: "Brush",
+          price: "$15.00",
+          imgUrl: require("./assets/img/brush_dark.png"),
+        },
+        {
+          name: "Scissors",
+          price: "$85.00",
+          imgUrl: require("./assets/img/scissors.png"),
+        },
+        {
+          name: "Hot Oil",
+          price: "$15.00",
+          imgUrl: require("./assets/img/hot_oil_dark.png"),
+        },
+        {
+          name: "Straight Razor",
+          price: "$30.00",
+          imgUrl: require("./assets/img/straight_razor_dark.png"),
         },
       ],
     };
