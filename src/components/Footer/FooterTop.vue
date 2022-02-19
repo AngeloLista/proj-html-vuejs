@@ -87,7 +87,7 @@ export default {
     .social-icons {
       text-align: center;
       a {
-        color: white;
+        color: $icon-color;
         & * {
           padding: 0 6px;
         }
