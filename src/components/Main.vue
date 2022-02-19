@@ -4,9 +4,7 @@
     <section id="pro-barbers" class="d-flex flex-column align-items-center">
       <!-- Section text -->
       <div class="content text-center">
-        <!-- title DA COMPONENTIZZARE -->
-        <span>award winning</span>
-        <h2>Pro Babers</h2>
+        <SectionTitle title="Pro Barbers" description="award winning" />
         <ButtonLink text="meet your new barber" />
       </div>
       <!-- Triangle Sepator -->
@@ -17,8 +15,7 @@
     <section id="services">
       <!-- Title -->
       <div class="content d-flex flex-column align-items-center py-5">
-        <span>mens grooming</span>
-        <h2>Services</h2>
+        <SectionTitle title="Services" description="mens grooming" />
         <div class="cards-container container d-flex align-items-center">
           <!-- Card -->
           <ServiceCard
@@ -38,8 +35,10 @@
     <section id="products">
       <div class="content d-flex flex-column align-items-center pt-5">
         <!-- Title -->
-        <span>we have you covered</span>
-        <h2>Avada Grooming Products</h2>
+        <SectionTitle
+          title="Avada Grooming Products"
+          description="we have you covered"
+        />
         <div class="cards-container container d-flex align-items-center mb-5">
           <!-- Card -->
           <ProductCard
@@ -88,6 +87,7 @@
 import ButtonLink from "./ButtonLink.vue";
 import ServiceCard from "./Main/ServiceCard.vue";
 import ProductCard from "./Main/ProductCard.vue";
+import SectionTitle from "./Main/SectionTitle.vue";
 
 export default {
   name: "Main",
@@ -95,6 +95,7 @@ export default {
     ButtonLink,
     ServiceCard,
     ProductCard,
+    SectionTitle,
   },
   props: ["services", "products"],
 };
@@ -111,18 +112,6 @@ main {
     background-size: cover;
     .content {
       padding: 100px 0;
-      span {
-        color: $driftwood;
-        font-weight: bold;
-        display: block;
-        text-transform: uppercase;
-      }
-      h2 {
-        font-family: $abril;
-        font-size: 70px;
-        color: $silver-chalice;
-        margin-bottom: 1.9rem;
-      }
     }
     .triangle-separetor {
       width: 0;
@@ -138,18 +127,6 @@ main {
     // Title
     .content {
       height: 100vh;
-    }
-    span {
-      color: $driftwood;
-      font-weight: bold;
-      display: block;
-      text-transform: uppercase;
-    }
-    h2 {
-      font-family: $abril;
-      font-size: 70px;
-      color: $silver-chalice;
-      margin-bottom: 1.9rem;
     }
     .triangle-separetor {
       width: 0;
@@ -186,18 +163,6 @@ main {
     background-image: url("../assets/img/avadabarbers-reviewsbackground.jpg");
     background-size: cover;
     padding-bottom: 150px;
-    span {
-      color: $driftwood;
-      font-weight: bold;
-      display: block;
-      text-transform: uppercase;
-    }
-    h2 {
-      font-family: $abril;
-      font-size: 70px;
-      color: $silver-chalice;
-      margin-bottom: 1.9rem;
-    }
   }
   // Featured Product
   #featured {
