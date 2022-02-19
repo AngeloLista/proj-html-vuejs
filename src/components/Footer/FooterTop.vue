@@ -11,7 +11,7 @@
               alt="Avada Footer Shop"
             />
           </a>
-          <ButtonLink text="shop our range now" />
+          <ButtonLinkLittle text="shop our range now" />
         </div>
         <!-- center -->
         <div class="col-4 p-3 d-flex align-items-center flex-column">
@@ -55,7 +55,7 @@
               alt="Avada Footer Shop"
             />
           </a>
-          <ButtonLink text="book your appoinment" />
+          <ButtonLinkLittle text="book your appoinment" />
         </div>
       </div>
     </div>
@@ -63,11 +63,11 @@
 </template>
 
 <script>
-import ButtonLink from "../ButtonLink.vue";
+import ButtonLinkLittle from "./ButtonLinkLittle.vue";
 
 export default {
   name: "FooterTop",
-  components: { ButtonLink },
+  components: { ButtonLinkLittle },
 };
 </script>
 

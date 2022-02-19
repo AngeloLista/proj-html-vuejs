@@ -4,8 +4,8 @@
     <FooterTop />
     <section id="footer-bottom">
       <p class="text-center">
-        Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved
-        | Powered by WordPress
+        &copy; Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights
+        Reserved | Powered by WordPress
       </p>
     </section>
   </footer>
@@ -31,6 +31,10 @@ footer {
     p {
       line-height: 70px;
       color: $mine-shaft;
+      font-size: 13px;
+    }
+    a {
+      font-size: 14px;
     }
   }
 }
