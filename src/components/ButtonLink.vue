@@ -14,7 +14,7 @@ export default {
 
 a {
   border: 2px solid $driftwood;
-  padding: 10px 30px;
+  padding: 15px 45px;
   text-decoration: none;
   color: $driftwood;
   text-transform: uppercase;
