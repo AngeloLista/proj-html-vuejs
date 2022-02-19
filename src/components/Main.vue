@@ -79,7 +79,7 @@
     </section>
 
     <!-- Reviews -->
-    <section id="reviews" class="container w-75">
+    <section id="reviews" class="container w-75 py-5">
       <SectionTitle title="Reviews" description="what people say" />
       <div class="row">
         <div class="col-4 p-3 d-flex align-items-center flex-column">
@@ -123,6 +123,72 @@
             alt="Mark Wilson"
           />
           <h5>Mark Wilson</h5>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Blog Posts -->
+    <section id="blog">
+      <div class="triangle-separetor top-white"></div>
+      <div
+        class="container w-75 py-5 mt-5 d-flex flex-column align-items-center"
+      >
+        <SectionTitle
+          title="Recent Blog Posts"
+          description="tales from the barber shop"
+        />
+        <div class="row">
+          <div class="col-4 p-3 d-flex align-items-center flex-column">
+            <a href="#">
+              <img
+                class="img-fluid my-3"
+                src="../assets/img/avadabarbers-second-blog-320x202.jpg"
+                alt="Avada Barbers Now Open"
+              />
+            </a>
+            <a href="#">
+              <h3>Avada Barbers Now Open</h3>
+            </a>
+            <p class="text-muted text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Phasellus ut dapibus magna. Present semper.
+            </p>
+          </div>
+          <div class="col-4 p-3 d-flex align-items-center flex-column">
+            <a href="#">
+              <img
+                class="img-fluid my-3"
+                src="../assets/img/avadabarbers-choosing-blog-320x202.jpg"
+                alt="Choosing The Right Barber"
+              />
+            </a>
+            <a href="#">
+              <h3>Choosing The Right Barber</h3>
+            </a>
+            <p class="text-muted text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Phasellus ut dapibus magna. Present semper.
+            </p>
+          </div>
+          <div class="col-4 p-3 d-flex align-items-center flex-column">
+            <a href="#">
+              <img
+                class="img-fluid my-3"
+                src="../assets/img/avadabarbers-ourservice-blog-320x202.jpg"
+                alt="Quick Service Guida"
+              />
+            </a>
+            <a href="#">
+              <h3>Quick Service Guide</h3>
+            </a>
+            <p class="text-muted text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Phasellus ut dapibus magna. Present semper.
+            </p>
+          </div>
+        </div>
+        <div class="my-5">
+          <ButtonLink text="read more from our blog" />
         </div>
       </div>
     </section>
@@ -198,6 +264,7 @@ main {
           font-family: $abril;
           color: $driftwood;
           margin-bottom: 30px;
+          padding: 0 15px;
         }
         p {
           text-align: center;
@@ -251,6 +318,30 @@ main {
       color: $driftwood;
       font-style: italic;
       font-weight: bold;
+    }
+  }
+  // Traingle Separetor
+  .triangle-separetor {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-left: 49.39vw solid transparent;
+    border-right: 49.39vw solid transparent;
+    &.top-white {
+      border-top: 100px solid white;
+    }
+  }
+  // Recent Blog Posts
+  #blog {
+    background-color: $recent-blog-bg;
+    a {
+      text-decoration: none;
+    }
+    h3 {
+      color: $driftwood;
+      font-family: $abril;
+      text-align: center;
+      margin-bottom: 15px;
     }
   }
 }
