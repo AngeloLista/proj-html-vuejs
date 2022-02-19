@@ -54,7 +54,7 @@
     </section>
 
     <!-- Featured Product -->
-    <section id="featured" class="container">
+    <section id="featured" class="container w-75">
       <div class="row">
         <div id="featured-product-img" class="col-4 d-flex align-items-center">
           <img
@@ -79,7 +79,53 @@
     </section>
 
     <!-- Reviews -->
-    <section id="reviews"></section>
+    <section id="reviews" class="container w-75">
+      <SectionTitle title="Reviews" description="what people say" />
+      <div class="row">
+        <div class="col-4 p-3 d-flex align-items-center flex-column">
+          <p class="text-muted text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+            aliquid rerum pariatur quisquam, deserunt autem culpa quis in alias
+            magnam perspiciatis placeat necessitatibus impedit sit quo
+            perferendis non totam doloremque.
+          </p>
+          <img
+            class="img-fluid my-3"
+            src="../assets/img/avadabarbers-trimcut-gallery3-200x201.jpg"
+            alt="John Doe"
+          />
+          <h5>John Doe</h5>
+        </div>
+        <div class="col-4 p-3 d-flex align-items-center flex-column">
+          <p class="text-muted text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+            aliquid rerum pariatur quisquam, deserunt autem culpa quis in alias
+            magnam perspiciatis placeat necessitatibus impedit sit quo
+            perferendis non totam doloremque.
+          </p>
+          <img
+            class="img-fluid my-3"
+            src="../assets/img/avadabarbers-trimcut-gallery7.jpg"
+            alt="Pete Jones"
+          />
+          <h5>Pete Jones</h5>
+        </div>
+        <div class="col-4 p-3 d-flex align-items-center flex-column">
+          <p class="text-muted text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+            aliquid rerum pariatur quisquam, deserunt autem culpa quis in alias
+            magnam perspiciatis placeat necessitatibus impedit sit quo
+            perferendis non totam doloremque.
+          </p>
+          <img
+            class="img-fluid my-3"
+            src="../assets/img/avadabarbers-trimcut-gallery3.jpg"
+            alt="Mark Wilson"
+          />
+          <h5>Mark Wilson</h5>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -103,6 +149,7 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/scss/_vars.scss";
+@import "../assets/scss/_utils.scss";
 
 main {
   font-family: $lato;
@@ -170,7 +217,6 @@ main {
     border-top: 6px solid $driftwood;
     margin-top: -35px;
     margin-bottom: 70px;
-    width: 75%;
     span {
       color: $driftwood;
       font-weight: bold;
@@ -193,6 +239,18 @@ main {
       img {
         object-fit: contain;
       }
+    }
+  }
+  // Reviews
+  #reviews {
+    img {
+      border-radius: 50%;
+      width: 30%;
+    }
+    h5 {
+      color: $driftwood;
+      font-style: italic;
+      font-weight: bold;
     }
   }
 }
