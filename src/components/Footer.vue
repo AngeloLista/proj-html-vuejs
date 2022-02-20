@@ -1,7 +1,7 @@
 <template>
   <footer>
     <!-- Footer Top -->
-    <FooterTop />
+    <FooterTop :infos="infos" />
     <section id="footer-bottom">
       <p class="text-center">
         &copy; Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights
@@ -16,6 +16,7 @@ import FooterTop from "./Footer/FooterTop.vue";
 export default {
   name: "Footer",
   components: { FooterTop },
+  props: ["infos"],
 };
 </script>
 

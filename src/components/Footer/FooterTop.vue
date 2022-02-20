@@ -24,14 +24,11 @@
           </a>
           <!-- Contacts -->
           <div class="contacts">
-            <span class="text-muted text-center d-block">Avada Barbers</span
-            ><span class="text-muted text-center d-block"
-              >123 New York Street</span
-            ><span class="text-muted text-center d-block">New York City</span
-            ><span class="text-muted text-center d-block"
-              >info@yourwebsite.com</span
-            ><span class="text-muted text-center d-block"
-              >+1 (555) 555-1212</span
+            <span
+              v-for="(info, index) in infos"
+              :key="index"
+              class="text-muted text-center d-block"
+              >{{ info }}</span
             >
           </div>
 
@@ -68,6 +65,7 @@ import ButtonLinkLittle from "./ButtonLinkLittle.vue";
 export default {
   name: "FooterTop",
   components: { ButtonLinkLittle },
+  props: ["infos"],
 };
 </script>
 

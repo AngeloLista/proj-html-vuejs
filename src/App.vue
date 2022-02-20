@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <Main :services="services" :products="products" />
-    <Footer />
+    <Footer :infos="infos" />
   </div>
 </template>
 
@@ -54,6 +54,13 @@ export default {
           price: "$30.00",
           imgUrl: require("./assets/img/straight_razor_dark.png"),
         },
+      ],
+      infos: [
+        "Avada Barbers",
+        "123 New York Street",
+        "New York City",
+        "info@yourwebsite.com",
+        "+1 (555) 555-1212",
       ],
     };
   },
