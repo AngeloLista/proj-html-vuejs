@@ -2,7 +2,11 @@
   <div id="app">
     <Header />
     <Main :services="services" :products="products" />
-    <Footer :infos="infos" />
+    <Footer
+      :infos="infos"
+      :FooterCardShopImgUrl="FooterCardShopImgUrl"
+      :FooterCardAppointmentImgUrl="FooterCardAppointmentImgUrl"
+    />
   </div>
 </template>
 
@@ -62,6 +66,8 @@ export default {
         "info@yourwebsite.com",
         "+1 (555) 555-1212",
       ],
+      FooterCardShopImgUrl: require("./assets/img/avadabarbers_footer_shop_image.png"),
+      FooterCardAppointmentImgUrl: require("./assets/img/avadabarbers_footer_appointment_image.png"),
     };
   },
 };
