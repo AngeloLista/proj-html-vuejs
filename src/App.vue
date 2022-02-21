@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header :menuItems="menuItems" />
     <Main :services="services" :products="products" :posts="posts" />
     <Footer
       :infos="infos"
@@ -20,6 +20,14 @@ export default {
   components: { Header, Main, Footer },
   data() {
     return {
+      menuItems: [
+        { text: "Pro Barbers", link: "pro-barbers" },
+        { text: "Services", link: "services" },
+        { text: "Products", link: "products" },
+        { text: "Featured Product", link: "featured" },
+        { text: "Reviews", link: "reviews" },
+        { text: "Recent Blog Posts", link: "blog" },
+      ],
       services: [
         {
           name: "Trim & Cut",

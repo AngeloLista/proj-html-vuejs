@@ -1,7 +1,7 @@
 <template>
   <header>
     <!-- header bar -->
-    <HeaderBar />
+    <HeaderBar :menuItems="menuItems" />
     <!-- Jumbotron -->
     <Jumbotron />
   </header>
@@ -14,6 +14,7 @@ import Jumbotron from "./Header/Jumbotron.vue";
 export default {
   name: "Header",
   components: { HeaderBar, Jumbotron },
+  props: ["menuItems"],
 };
 </script>
 

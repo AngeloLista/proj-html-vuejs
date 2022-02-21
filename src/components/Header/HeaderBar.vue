@@ -27,11 +27,13 @@
         @click="isMenuVisible = false"
         class="fa-solid fa-xmark fa-2x"
       ></i>
-      <a @click="isMenuVisible = false" href="#services"> Services</a>
-      <a @click="isMenuVisible = false" href="#products">Products</a>
-      <a @click="isMenuVisible = false" href="#featured">Featured</a>
-      <a @click="isMenuVisible = false" href="#reviews">Reviews</a>
-      <a @click="isMenuVisible = false" href="#blog">Recent Blog Posts</a>
+      <a
+        v-for="(menuItem, index) in menuItems"
+        :key="index"
+        @click="isMenuVisible = false"
+        :href="`#${menuItem.link}`"
+        >{{ menuItem.text }}</a
+      >
     </div>
     <div class="shop-menu">
       <a href="#" class="mx-3">
@@ -50,6 +52,7 @@
 <script>
 export default {
   name: "HeaderBar",
+  props: ["menuItems"],
   data() {
     return {
       isMenuVisible: false,
