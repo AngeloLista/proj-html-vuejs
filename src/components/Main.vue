@@ -82,6 +82,7 @@
     <section id="reviews" class="container w-75 py-5">
       <SectionTitle title="Reviews" description="what people say" />
       <div class="row">
+        <!-- Review -->
         <div class="col-4 p-3 d-flex align-items-center flex-column">
           <p class="text-muted text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
@@ -96,6 +97,7 @@
           />
           <h5>John Doe</h5>
         </div>
+        <!-- Review -->
         <div class="col-4 p-3 d-flex align-items-center flex-column">
           <p class="text-muted text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
@@ -110,6 +112,7 @@
           />
           <h5>Pete Jones</h5>
         </div>
+        <!-- Review -->
         <div class="col-4 p-3 d-flex align-items-center flex-column">
           <p class="text-muted text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam

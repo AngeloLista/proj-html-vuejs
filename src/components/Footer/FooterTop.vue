@@ -77,6 +77,7 @@ export default {
         }
         &:hover {
           color: gray;
+          transition: 0.5s;
         }
       }
     }

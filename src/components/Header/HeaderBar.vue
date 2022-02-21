@@ -34,12 +34,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../../assets/scss/_vars.scss";
+
 #header-bar {
   height: 70px;
 }
 .shop-menu {
   a {
     color: white;
+
+    &:hover {
+      color: $driftwood;
+      transition: 0.5s;
+    }
   }
 }
 </style>
