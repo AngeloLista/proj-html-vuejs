@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Main :services="services" :products="products" />
+    <Main :services="services" :products="products" :posts="posts" />
     <Footer
       :infos="infos"
       :FooterCardShopImgUrl="FooterCardShopImgUrl"
@@ -57,6 +57,26 @@ export default {
           name: "Straight Razor",
           price: "$30.00",
           imgUrl: require("./assets/img/straight_razor_dark.png"),
+        },
+      ],
+      posts: [
+        {
+          title: "Avada Barbers Now Open",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Phasellus ut dapibus magna. Present semper.",
+          imgUrl: require("./assets/img/avadabarbers-second-blog-320x202.jpg"),
+        },
+        {
+          title: "Choosing The Right Barber",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Phasellus ut dapibus magna. Present semper.",
+          imgUrl: require("./assets/img/avadabarbers-choosing-blog-320x202.jpg"),
+        },
+        {
+          title: "Quick Service Guide",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Phasellus ut dapibus magna. Present semper.",
+          imgUrl: require("./assets/img/avadabarbers-ourservice-blog-320x202.jpg"),
         },
       ],
       infos: [

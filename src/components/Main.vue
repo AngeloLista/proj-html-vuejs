@@ -91,7 +91,7 @@
           </p>
           <img
             class="img-fluid my-3"
-            src="../assets/img/avadabarbers-trimcut-gallery3-200x201.jpg"
+            src="../assets/img/avadabarbers-trimcut-gallery6.jpg"
             alt="John Doe"
           />
           <h5>John Doe</h5>
@@ -127,7 +127,7 @@
       </div>
     </section>
 
-    <!-- Recent Blog Posts DA COMPONENTIZZARE-->
+    <!-- Recent Blog Posts -->
     <section id="blog">
       <div class="triangle-separetor top-white"></div>
       <div
@@ -139,52 +139,22 @@
         />
         <div class="row">
           <div class="col-4 p-3 d-flex align-items-center flex-column">
-            <a href="#">
-              <img
-                class="img-fluid my-3"
-                src="../assets/img/avadabarbers-second-blog-320x202.jpg"
-                alt="Avada Barbers Now Open"
-              />
-            </a>
-            <a href="#">
-              <h3>Avada Barbers Now Open</h3>
-            </a>
-            <p class="text-muted text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Phasellus ut dapibus magna. Present semper.
-            </p>
+            <BlogPostCard
+              :title="this.posts[0].title"
+              :imgUrl="this.posts[0].imgUrl"
+            />
           </div>
           <div class="col-4 p-3 d-flex align-items-center flex-column">
-            <a href="#">
-              <img
-                class="img-fluid my-3"
-                src="../assets/img/avadabarbers-choosing-blog-320x202.jpg"
-                alt="Choosing The Right Barber"
-              />
-            </a>
-            <a href="#">
-              <h3>Choosing The Right Barber</h3>
-            </a>
-            <p class="text-muted text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Phasellus ut dapibus magna. Present semper.
-            </p>
+            <BlogPostCard
+              :title="this.posts[1].title"
+              :imgUrl="this.posts[1].imgUrl"
+            />
           </div>
           <div class="col-4 p-3 d-flex align-items-center flex-column">
-            <a href="#">
-              <img
-                class="img-fluid my-3"
-                src="../assets/img/avadabarbers-ourservice-blog-320x202.jpg"
-                alt="Quick Service Guida"
-              />
-            </a>
-            <a href="#">
-              <h3>Quick Service Guide</h3>
-            </a>
-            <p class="text-muted text-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Phasellus ut dapibus magna. Present semper.
-            </p>
+            <BlogPostCard
+              :title="this.posts[2].title"
+              :imgUrl="this.posts[2].imgUrl"
+            />
           </div>
         </div>
         <div class="my-5">
@@ -200,6 +170,7 @@ import ButtonLink from "./ButtonLink.vue";
 import ServiceCard from "./Main/ServiceCard.vue";
 import ProductCard from "./Main/ProductCard.vue";
 import SectionTitle from "./Main/SectionTitle.vue";
+import BlogPostCard from "./Main/BlogPostCard.vue";
 
 export default {
   name: "Main",
@@ -208,8 +179,9 @@ export default {
     ServiceCard,
     ProductCard,
     SectionTitle,
+    BlogPostCard,
   },
-  props: ["services", "products"],
+  props: ["services", "products", "posts"],
 };
 </script>
 
