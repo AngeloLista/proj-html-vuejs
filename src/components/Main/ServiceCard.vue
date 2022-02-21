@@ -1,7 +1,9 @@
 <template>
   <div class="service-card d-flex align-items-center flex-column">
-    <img :src="imgUrl" :alt="name" />
-    <h3>{{ name }}</h3>
+    <a id="img-link" href="#"><img :src="imgUrl" :alt="name" /></a>
+    <a href="#">
+      <h3>{{ name }}</h3>
+    </a>
     <p class="text-muted">
       {{ text }}
     </p>
@@ -22,9 +24,15 @@ export default {
   height: 300px;
   width: calc(100% / 3);
   padding: 30px 70px;
-  img {
-    margin-bottom: 30px;
+  #img-link {
     height: 35%;
+    margin-bottom: 30px;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    height: 100%;
   }
   h3 {
     font-family: $abril;

@@ -127,7 +127,7 @@
       </div>
     </section>
 
-    <!-- Recent Blog Posts -->
+    <!-- Recent Blog Posts DA COMPONENTIZZARE-->
     <section id="blog">
       <div class="triangle-separetor top-white"></div>
       <div

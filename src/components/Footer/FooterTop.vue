@@ -2,11 +2,12 @@
   <section id="footer-top">
     <div class="container w-75 py-5 d-flex flex-column align-items-center">
       <div class="row">
-        <!-- left -->
+        <!-- Left -->
         <div class="col-4 p-3">
           <FooterCard :imgUrl="FooterCardShopImgUrl" />
         </div>
-        <!-- center -->
+
+        <!-- Center -->
         <div class="col-4 p-3 d-flex align-items-center flex-column">
           <img
             class="img-fluid my-3"
@@ -34,7 +35,8 @@
             </div>
           </div>
         </div>
-        <!-- right -->
+
+        <!-- Right -->
         <div class="col-4 p-3">
           <FooterCard :imgUrl="FooterCardAppointmentImgUrl" />
         </div>
@@ -72,6 +74,9 @@ export default {
         color: $icon-color;
         & * {
           padding: 0 6px;
+        }
+        &:hover {
+          color: gray;
         }
       }
     }
