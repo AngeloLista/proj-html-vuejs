@@ -18,23 +18,31 @@
       />
     </a>
     <!-- Hamburger menu and shop icon -->
-    <div
-      class="menu d-flex flex-column align-items-center justify-content-center"
-      v-if="isMenuVisible"
-    >
-      <i
-        role="button"
-        @click="isMenuVisible = false"
-        class="fa-solid fa-xmark fa-2x"
-      ></i>
-      <a
-        v-for="(menuItem, index) in menuItems"
-        :key="index"
-        @click="isMenuVisible = false"
-        :href="`#${menuItem.link}`"
-        >{{ menuItem.text }}</a
+    <Transition name="slide-fade">
+      <div
+        class="
+          menu
+          d-flex
+          flex-column
+          align-items-center
+          justify-content-center
+        "
+        v-if="isMenuVisible"
       >
-    </div>
+        <i
+          role="button"
+          @click="isMenuVisible = false"
+          class="fa-solid fa-xmark fa-2x"
+        ></i>
+        <a
+          v-for="(menuItem, index) in menuItems"
+          :key="index"
+          @click="isMenuVisible = false"
+          :href="`#${menuItem.link}`"
+          >{{ menuItem.text }}</a
+        >
+      </div>
+    </Transition>
     <div class="shop-menu">
       <a href="#" class="mx-3">
         <i class="fa-solid fa-cart-shopping"></i>
@@ -64,18 +72,31 @@ export default {
 <style scoped lang="scss">
 @import "../../assets/scss/_vars.scss";
 
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
 #header-bar {
   height: 70px;
 }
 .menu {
   background-color: black;
-  color: white;
+  color: $silver-chalice;
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  text-align: center;
   i {
     position: absolute;
     top: 30px;
@@ -86,9 +107,9 @@ export default {
     }
   }
   a {
-    color: white;
+    color: $silver-chalice;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 33px;
     margin-bottom: 30px;
     &:hover {
       color: $driftwood;
