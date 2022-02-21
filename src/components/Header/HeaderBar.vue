@@ -90,7 +90,8 @@ export default {
   height: 70px;
 }
 .menu {
-  background-color: black;
+  background-color: rgba($color: rgb(15, 15, 15), $alpha: 0.9);
+  backdrop-filter: blur(10px);
   color: $silver-chalice;
   position: fixed;
   top: 0;
@@ -99,8 +100,9 @@ export default {
   left: 0;
   i {
     position: absolute;
-    top: 30px;
+    top: 19px;
     right: 30px;
+    font-size: 30px;
     &:hover {
       color: $driftwood;
       transition: 0.3s;
